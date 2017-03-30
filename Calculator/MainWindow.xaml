@@ -7,6 +7,15 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <TextBox HorizontalAlignment="Left" Height="31" Margin="186,36,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="150"/>
+        <TextBox HorizontalAlignment="Left" Height="31" Margin="186,162,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="150"/>
+        <Button Content="+" HorizontalAlignment="Left" Height="32" Margin="84,97,0,0" VerticalAlignment="Top" Width="50" Click="Button_Click"/>
+        <Button Content="-" HorizontalAlignment="Left" Height="32" Margin="164,97,0,0" VerticalAlignment="Top" Width="50"/>
+        <Button Content="*" HorizontalAlignment="Left" Height="32" Margin="237,97,0,0" VerticalAlignment="Top" Width="50"/>
+        <Button Content="/" HorizontalAlignment="Left" Height="32" Margin="311,97,0,0" VerticalAlignment="Top" Width="50"/>
+        <Button Content="%" HorizontalAlignment="Left" Height="32" Margin="389,97,0,0" VerticalAlignment="Top" Width="50"/>
+        <TextBlock HorizontalAlignment="Left" Height="29" Margin="223,211,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="61"/>
+        <TextBox HorizontalAlignment="Left" Height="31" Margin="186,256,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="150"/>
+
     </Grid>
 </Window>
