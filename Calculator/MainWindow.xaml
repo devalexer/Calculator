@@ -7,15 +7,16 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <TextBox HorizontalAlignment="Left" Height="31" Margin="186,36,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="150"/>
-        <TextBox HorizontalAlignment="Left" Height="31" Margin="186,162,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="150"/>
-        <Button Content="+" HorizontalAlignment="Left" Height="32" Margin="84,97,0,0" VerticalAlignment="Top" Width="50" Click="Button_Click"/>
-        <Button Content="-" HorizontalAlignment="Left" Height="32" Margin="164,97,0,0" VerticalAlignment="Top" Width="50"/>
-        <Button Content="*" HorizontalAlignment="Left" Height="32" Margin="237,97,0,0" VerticalAlignment="Top" Width="50"/>
-        <Button Content="/" HorizontalAlignment="Left" Height="32" Margin="311,97,0,0" VerticalAlignment="Top" Width="50"/>
-        <Button Content="%" HorizontalAlignment="Left" Height="32" Margin="389,97,0,0" VerticalAlignment="Top" Width="50"/>
-        <TextBlock HorizontalAlignment="Left" Height="29" Margin="223,211,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="61"/>
-        <TextBox HorizontalAlignment="Left" Height="31" Margin="186,256,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="150"/>
+        
+        <TextBox Name="Input1" HorizontalAlignment="Left" Height="31" Margin="186,36,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150"/>
+        <TextBox Name="Input2" HorizontalAlignment="Left" Height="31" Margin="186,162,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="150"/>
+        <Button Content="+" HorizontalAlignment="Left" Height="32" Margin="84,97,0,0" VerticalAlignment="Top" Width="50" Click="Add_Click"/>
+        <Button Content="-" HorizontalAlignment="Left" Height="32" Margin="164,97,0,0" VerticalAlignment="Top" Width="50" Click="Subtract_Click"/>
+        <Button Content="*" HorizontalAlignment="Left" Height="32" Margin="237,97,0,0" VerticalAlignment="Top" Width="50" Click="Mult_Click"/>
+        <Button Content="/" HorizontalAlignment="Left" Height="32" Margin="311,97,0,0" VerticalAlignment="Top" Width="50" Click="Div_Click"/>
+        <Button Content="%" HorizontalAlignment="Left" Height="32" Margin="389,97,0,0" VerticalAlignment="Top" Width="50" Click="Percent_Click"/>
+        <TextBlock HorizontalAlignment="Center" Height="29" Margin="0,211,0,0" TextWrapping="Wrap" Text="=" VerticalAlignment="Top" Width="61" TextAlignment="Center" FontSize="20" FontWeight="Bold"/>
+        <TextBlock Name="Calculation" HorizontalAlignment="Center" Height="29" Margin="0,250,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="149" FontSize="20" FontWeight="Bold" TextAlignment="Center"/>
 
     </Grid>
 </Window>

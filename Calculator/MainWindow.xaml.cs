@@ -23,6 +23,56 @@ namespace Calculator
         public MainWindow()
         {
             InitializeComponent();
+            this.Title = "Calculator";
         }
+     
+        private void FirstUserInput(object sender, TextChangedEventArgs e)
+        {
+            //pulls users 1st input from first box
+            var input1 = this.Input1.Text;
+        }
+
+        private void SecondUserInput(object sender, TextChangedEventArgs e)
+        {
+            //pulls users 2nd number input from second box
+            var input2 = this.Input2.Text;
+        }
+
+        private void Add_Click(object sender, RoutedEventArgs e)
+        {
+            //performs addition function
+            var button = (Button)sender;
+            int total = Int32.Parse(Input1.Text) + Int32.Parse(Input2.Text);
+            this.Calculation.Text = total.ToString();
+        }
+
+        private void Subtract_Click(object sender, RoutedEventArgs e)
+        {
+            //performs subtraction function
+            int total = Int32.Parse(Input1.Text) - Int32.Parse(Input2.Text);
+            this.Calculation.Text = total.ToString();
+        }
+
+        private void Mult_Click(object sender, RoutedEventArgs e)
+        {
+            //performs multiplication function
+            int total = Int32.Parse(Input1.Text) * Int32.Parse(Input2.Text);
+            this.Calculation.Text = total.ToString();
+        }
+
+        private void Div_Click(object sender, RoutedEventArgs e)
+        {
+            //performs division function
+            int total = Int32.Parse(Input1.Text) / Int32.Parse(Input2.Text);
+            this.Calculation.Text = total.ToString();
+        }
+
+        private void Percent_Click(object sender, RoutedEventArgs e)
+        {
+            //performs percentage function
+            int total = (Int32.Parse(Input1.Text) / Int32.Parse(Input2.Text)) * 100;
+            this.Calculation.Text = total.ToString();
+        }
+
     }
 }
