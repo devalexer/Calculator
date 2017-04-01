@@ -23,7 +23,7 @@ namespace Calculator
         public MainWindow()
         {
             InitializeComponent();
-            this.Title = "Calculator";
+            this.Title = "Standard Calculator";
         }
      
         private void FirstUserInput(object sender, TextChangedEventArgs e)
@@ -74,5 +74,23 @@ namespace Calculator
             this.Calculation.Text = total.ToString();
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            //clears default 0 when numbers are entered
+            if (Calculation.Text == "0")
+                Calculation.Text = string.Empty;
+            
+            //for any button with Button_Click event, prints number of key to Calculation box
+            Button button = (Button)sender;
+            Calculation.Text = Calculation.Text + button.Content;
+        }
+
+        private void CE_Click(object sender, RoutedEventArgs e)
+        {
+            //CE button clears all and resets calculator
+            this.Calculation.Text = "";
+            this.Input1.Text = string.Empty;
+            this.Input2.Text = string.Empty;
+        }
     }
 }
