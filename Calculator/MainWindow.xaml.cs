@@ -29,18 +29,6 @@ namespace Calculator
         string opr;
         double a, b, result;
 
-        //private void FirstUserInput(object sender, TextChangedEventArgs e)
-        //{
-        //    //pulls users 1st input from first box
-        //    var input1 = this.Input1.Text;
-        //}
-
-        //private void SecondUserInput(object sender, TextChangedEventArgs e)
-        //{
-        //    //pulls users 2nd number input from second box
-        //    var input2 = this.Input2.Text;
-        //}
-
         private void Add_Click(object sender, RoutedEventArgs e)
         {
             //takes 1st input, converts to double, saves in "a", attaches operator, clears window
@@ -106,6 +94,41 @@ namespace Calculator
             }
         }
 
+        private void XPower2_Click(object sender, RoutedEventArgs e)
+        {
+            if (Calculation.Text == "")
+                Calculation.Text = "";
+            //takes 1st input, converts to double, pultiplies by self, saves in "result", converts back to string, clears window
+            else
+            {
+                result = Convert.ToDouble(Calculation.Text) * Convert.ToDouble(Calculation.Text);
+                Calculation.Text = result.ToString();
+            }
+        }
+
+        private void DivByX_Click(object sender, RoutedEventArgs e)
+        {
+            if (Calculation.Text == "")
+                Calculation.Text = "";
+            //takes 1st input, converts to double, divides 1 by double, saves in "result", converts back to string
+            else
+            {
+                result = 1 / Convert.ToDouble(Calculation.Text);
+                Calculation.Text = result.ToString();
+            }
+        }
+
+        private void SqRt_Click(object sender, RoutedEventArgs e)
+        {
+            if (Calculation.Text == "")
+                Calculation.Text = "";
+            //takes 1st input, converts to double, divides 1 by double, saves in "result", converts back to string
+            else
+            {
+                Calculation.Text = Math.Sqrt(Convert.ToDouble(Calculation.Text)).ToString();
+            }
+        }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             //clears default 0 when numbers are entered
@@ -154,25 +177,45 @@ namespace Calculator
                         result = a % b;
                         Calculation.Text = result.ToString();
                         break;
-
-                    case "x^2":
-                        result = Math.Pow(a, 2);
-                        Calculation.Text = result.ToString();
-                        break;
                 }
             }
         }
 
-        private void CE_Click(object sender, RoutedEventArgs e)
+        private void Backspace_Click(object sender, RoutedEventArgs e)
         {
-            //CE button clears current text in box
-            Calculation.Text = "";
+            string str = Calculation.Text;
+            int n = str.Length;
+            if(n == 0)
+            {
+                Calculation.Text = "";
+            }
+            else
+            {
+                Calculation.Text = str.Substring(0, n - 1);
+            }
+        }
+
+        private void Point_Click(object sender, RoutedEventArgs e)
+        {
+            //CE button checks to make sure . has not previously been used and adds it if not
+            if (Calculation.Text.Contains("."))
+                 Calculation.Text = Calculation.Text;
+            else
+            {
+                Calculation.Text += ".";
+            }
         }
 
         private void C_Click(object sender, RoutedEventArgs e)
         {
             //CE button clears all and resets calculator
             this.Calculation.Text = "";
+        }
+
+        private void CE_Click(object sender, RoutedEventArgs e)
+        {
+            //CE button clears current text in box
+            Calculation.Text = string.Empty;
         }
 
         private void PosNeg_Click(object sender, RoutedEventArgs e)
