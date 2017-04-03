@@ -129,6 +129,59 @@ namespace Calculator
             }
         }
 
+        //TODO: Fix this method. Currently adds number to end but misses formatting of Button_Click
+        private void OnKeyDownHandler(object sender, KeyEventArgs e)
+        {
+            if (Calculation.Text == "0")
+                Calculation.Text = string.Empty;
+
+            if (e.Key == Key.D1)
+            {
+                Calculation.Text += "1";
+            }
+            if (e.Key == Key.D2)
+            {
+                Calculation.Text += "2";
+            }
+            if (e.Key == Key.D3)
+            {
+                Calculation.Text += "3";
+            }
+            if (e.Key == Key.D4)
+            {
+                Calculation.Text += "4";
+            }
+            if (e.Key == Key.D5)
+            {
+                Calculation.Text += "5";
+            }
+            if (e.Key == Key.D6)
+            {
+                Calculation.Text += "6";
+            }
+            if (e.Key == Key.D7)
+            {
+                Calculation.Text += "7";
+            }
+            if (e.Key == Key.D8)
+            {
+                Calculation.Text += "8";
+            }
+            if (e.Key == Key.D9)
+            {
+                Calculation.Text += "9";
+            }
+            if (e.Key == Key.D0)
+            {
+                Calculation.Text += "0";
+            }
+            //TODO: Find out how to make symbols work
+            //if (e.Key == Key.Add)
+            //{
+            //    Calculation.Text += "+";
+            //}
+        }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             //clears default 0 when numbers are entered
@@ -137,6 +190,7 @@ namespace Calculator
             
             //for any button with Button_Click event, prints number of that key to Calculation box
             Button button = (Button)sender;
+
             if ((button == null) || (button.ContentStringFormat == "0"))
                 return;
 
@@ -183,6 +237,7 @@ namespace Calculator
 
         private void Backspace_Click(object sender, RoutedEventArgs e)
         {
+            //if text exists, this function will take off the last int of the strings length
             string str = Calculation.Text;
             int n = str.Length;
             if(n == 0)
