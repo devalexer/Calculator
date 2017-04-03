@@ -96,5 +96,8 @@
   <ItemGroup>
     <Resource Include="Properties\calculator-icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Properties\colorful3dsquares.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
